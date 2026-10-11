@@ -229,22 +229,22 @@ export const botConfig = {
       low: {
         emoji: "🟢",
         color: "#2ECC71",
-        label: "Low",
+        label: "nízká",
       },
       medium: {
         emoji: "🟡",
         color: "#F1C40F",
-        label: "Medium",
+        label: "střední",
       },
       high: {
         emoji: "🔴",
         color: "#E74C3C",
-        label: "High",
+        label: "vysoká",
       },
       urgent: {
         emoji: "🚨",
         color: "#E91E63",
-        label: "Urgent",
+        label: "urgentní",
       },
     },
 
