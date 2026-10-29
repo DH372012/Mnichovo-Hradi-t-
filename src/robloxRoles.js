@@ -58,7 +58,13 @@ export function registerRobloxRoles(app, client) {
 
       if (!response.ok) {
         // Chybu API nepovažujeme za potvrzení, že hráč nemá roli.
-        console.warn(`[RobloxRoles] Bloxlink HTTP ${response.status}`);
+        const details = await response.json().catch(() => ({}));
+
+console.warn(
+  '[RobloxRoles] Bloxlink request failed:',
+  response.status,
+  details.error || details.message || 'No error description'
+);
         return res.status(502).json({
           error: 'Bloxlink lookup failed',
           upstreamStatus: response.status,
